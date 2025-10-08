@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { VersionDisplay } from '../../src/components/VersionDisplay'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,9 +23,8 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-[#333333] relative">
-              AgroSens
+              AgroSensIA
               <span className="relative">
-                I
                 <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
                   <div className="w-3 h-3 text-[#00C851]">
                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -33,7 +33,6 @@ export default function Header() {
                   </div>
                 </div>
               </span>
-              A
             </div>
           </div>
 
@@ -50,11 +49,12 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Language Selector */}
-          <div className="hidden md:flex items-center">
+          {/* Language Selector and Version */}
+          <div className="hidden md:flex items-center space-x-3">
             <button className="flex items-center space-x-2 text-[#333333] hover:text-[#00C851] transition-colors">
-              <span className="text-xl">🇬🇧</span>
+              <span className="text-xl">🇲🇽</span>
             </button>
+            <VersionDisplay />
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,7 +83,7 @@ export default function Header() {
                 </a>
               ))}
               <button className="flex items-center space-x-2 text-[#333333] hover:text-[#00C851] transition-colors w-fit">
-                <span className="text-xl">🇬🇧</span>
+                <span className="text-xl">🇲🇽</span>
               </button>
             </nav>
           </div>
