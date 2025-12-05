@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { contactConfig } from '../config/contact'
 
 export default function FloatingWhatsApp() {
   const [isVisible, setIsVisible] = useState(false)
@@ -14,11 +15,11 @@ export default function FloatingWhatsApp() {
     return () => clearTimeout(timer)
   }, [])
 
-  if (!isVisible) return null
+  if (!isVisible || !contactConfig.phone) return null
 
-  const whatsappNumber = "+1234567890" // Reemplaza con el número real
+  const whatsappNumber = contactConfig.phone
   const message = "¡Hola! Me interesa conocer más sobre AgroSensIA y sus soluciones para agricultura inteligente."
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`
 
   return (
     <div className="fixed bottom-6 right-6 z-50">

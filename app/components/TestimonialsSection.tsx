@@ -38,19 +38,19 @@ export default function TestimonialsSection() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-[#F5FDF5] to-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Estadísticas */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-6">
             Resultados que hablan por sí solos
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#00C851] mb-2">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00C851] mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-gray-600 font-medium text-sm md:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -60,18 +60,18 @@ export default function TestimonialsSection() {
 
         {/* Testimonios */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-[#00C851] text-white px-6 py-3 rounded-full mb-6 font-semibold">
+          <div className="inline-block bg-[#00C851] text-white px-6 py-3 rounded-full mb-6 font-semibold shadow-md">
             Testimonios
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
             Lo que dicen nuestros clientes
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Historias reales de productores que han transformado su agricultura con AgroSensIA.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-100">
               {/* Rating */}
@@ -127,9 +127,6 @@ export default function TestimonialsSection() {
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
               </svg>
             </a>
-            <button className="border-2 border-[#00C851] text-[#00C851] hover:bg-[#00C851] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
-              Ver Casos de Estudio
-            </button>
           </div>
         </div>
       </div>

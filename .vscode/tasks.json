@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Move AgrosensiaApp.jpg to public",
+			"type": "shell",
+			"command": "Move-Item -Path 'src/AgrosensiaApp.jpg' -Destination 'public/AgrosensiaApp.jpg'",
+			"args": [],
+			"isBackground": false
+		}
+	]
+}
